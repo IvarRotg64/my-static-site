@@ -1,0 +1,73 @@
+body{
+background-position: center;
+background-repeat: no-repeat;
+padding: 0;
+margin: 0;
+background-color: black;
+}
+
+h1{
+text-align: center;
+font-family: cursive;
+color: blue;
+}
+
+.planet-container{
+display:grid;
+grid-template-columns: repeat(4,1fr);
+gap: 20px;
+padding: 20px;
+}
+
+.planet{
+display: flex;
+flex-direction:column;
+align-items:center;
+text-align: center;
+border: 2px solid #ffe100;
+border-radius: 10px;
+padding:15px;
+background-color: #ff0000;
+box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); /* Adds a soft shadow */
+}
+
+@media (max-width: 900px) {
+ .planet-container {
+ grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+ }
+}
+  
+@media (max-width: 600px) {
+ .planet-container {
+ grid-template-columns: repeat(1, 1fr); /* Switch to 1 column */
+ }
+}
+
+.planet-image{
+width: 100px; /* Sets a fixed width */
+height: 100px; /* Sets a fixed height */
+object-fit: cover; /* Ensures the image fills the space */
+border-radius: 50%; /* Makes it circular */
+transition: transform 0.3s ease-in-out;
+}
+
+.planet-image:hover{
+transform: scale(1.1); /* Zooms in by 10% */
+}
+  
+.planet-description {
+ h2{
+ font-size: 20px;
+ margin-bottom: 10px;
+ text-decoration: underline;
+ color: rgb(255, 255, 255);
+}
+ p{
+ font-size: 14px;
+ line-height: 1.5;
+ color: #000000;
+ }
+flex: 1; /* Take up remaining space */
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
